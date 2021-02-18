@@ -222,8 +222,8 @@ header:hover .top_menu h1{
 
 .community_event_list ul{
    position: absolute;
-   right:  110px;
-   top:120px
+   right:  5.5rem;
+   top:6rem;
 }
 
 .community_event_list ul li{
@@ -290,13 +290,10 @@ header:hover .black_icon{
     visibility: visible;
 }
 
-
 .right_header ul li img{
     height: 1.4rem;
     width: 1.4rem;
 }
-
-
 
 .slider img{
     width: 100%;
