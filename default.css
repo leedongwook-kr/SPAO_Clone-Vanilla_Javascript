@@ -1,0 +1,303 @@
+html{
+    font-size: 20px;
+}
+
+body{
+    font-size: 1rem;
+    margin: 0;
+    background-color: black;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+h1{
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+/*************************헤더영역 만들기******************************************/
+
+header{
+    position: absolute;
+    transition: 300ms;
+    cursor: default;
+    width: 100%;
+}
+
+header:hover {
+    background-color: white;
+}
+
+.header_container {
+    width: 85.5rem;
+    height: 4.5rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+/* 헤더 왼쪽 부분 */
+.left_header{
+    display: flex;
+    align-items: center;
+}
+.left_header a{
+    height: 100%;
+    line-height: 100%;
+    padding: 1.25rem 0 0 0;
+    margin: 0 1.75rem 0 0;
+   
+}
+
+/*------------------------ 로고---------------------- */
+
+.logo{
+    position: relative;
+}
+
+.logo_red{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+header:hover .logo_red {
+    opacity: 1;
+}
+
+header:hover .logo_white {
+    opacity: 0;
+}
+
+.logo a img{
+    width: 6.5rem;
+    height: 2rem;
+}
+
+/*----------------- 로고------------------ */
+
+/*------------------- 레프트 헤더 네비게이션----------------------- */
+.left_header nav{
+    height: 100%;
+}
+
+.left_header nav ul{
+    height: 100%;
+}
+
+.top_menu{
+    color:#fff;
+    display: inline-block;
+    height: 100%;
+    padding: 1.8rem 1.25rem 1.8rem 1.25rem;
+    cursor: pointer; 
+}
+
+.top_menu h1{
+    font-size: .75rem;
+    font-weight: 550;
+}
+
+header:hover .top_menu h1{
+    color: black;
+}
+/* 네비 숨겨진 부분 */
+.menu_content{
+    background-color: #ffffff;
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    width: 100%;
+    align-content: center;
+    cursor: default;
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms ease-out;
+    border-top: 1px solid gainsboro;
+}
+
+.top_menu.women:hover .menu_content.women,
+.top_menu.men:hover .menu_content.men,
+.top_menu.collabo:hover .menu_content.collabo,
+.top_menu.community:hover .menu_content.community,
+.top_menu.kids:hover .menu_content.kids{
+    opacity: 1;
+    visibility: visible;    
+}
+
+
+.content_container{ 
+    /* 네비 오픈 텍스트 - 이미지 양끝정렬 */
+    display: flex;
+    justify-content: space-between;
+    width: 66rem;
+    margin: 0 auto;
+    padding: 2.5rem 0 0 0;
+}
+/* 디테일 메뉴 텍스트 부분 */
+.container_list{
+    display: flex;
+    padding: 0 0 1.75rem 0;
+}
+
+.container_list ul li{
+    font-size: .7rem;
+}
+
+.container_list ul:first-child li {
+    color: #1a1a1a;
+    padding: 0 7.5rem 1rem 0;
+}
+
+.container_list ul:nth-child(n+2) li{
+    padding: .4rem 0 .4rem 2rem;
+}
+
+.container_list ul:nth-child(n+2) li a{
+    color: #828282;
+}
+
+.container_list ul:nth-child(n+2) li a span{
+    color:#000;
+}
+
+.container_list ul:nth-child(2) li{
+    border-left: 1px solid #e5e5e5;
+}
+
+
+/* 디테일 메뉴 이미지 부분*/
+.container_image{
+    padding: 0 0 3.5rem 0;
+}
+
+.container_image a img {
+    width: 10rem;
+    height: 14.5rem;
+    object-fit: cover;
+}
+
+.community_container_list{
+    position: relative;
+    display: flex;
+    padding: 0 6rem 1.75rem 0;
+}
+.community_container_list ul li{
+    font-size: 0.7rem;
+    color: #1a1a1a;
+    padding: 0.5rem 14.5rem .5rem 0;
+}
+
+
+/* 커뮤니티 내 이벤트 부분 리스트 */
+
+.community_event_list{
+    pisplay: flex;
+    align-items: center;  
+}
+
+.community_event_list ul{
+   position: absolute;
+   right:  110px;
+   top:120px
+}
+
+.community_event_list ul li{
+    border-left: 1px solid #e5e5e5;
+    padding: 0.25rem 0 0.25rem 2rem;
+    
+}
+.community_event_list ul li a{
+    color: #828282;
+}
+
+
+/* -------------------헤더 오른쪽----------------------------- */
+.right_header {
+    position: relative;
+}
+
+.right_header ul{
+    height: 100%;
+}
+
+.right_header ul li{
+    display: inline-block;
+    padding: 1.6rem 1.25rem 1.25rem 1.25rem;
+}
+
+.white_icon{
+     position: relative;
+}
+
+.hidden_button ul{
+    position: absolute;
+    right: 12.75rem;
+    top: 4.5rem;
+    background-color: white;
+    opacity: 0;
+    visibility: hidden;
+    border-top: 1px solid #808080;
+    transition: 300ms;
+}
+
+.hidden_button ul li {
+    width: 3.9rem;
+    margin: auto;
+    padding: 0.4rem 0 0.4rem 0 ;
+    text-align: center;
+}
+.hidden_button ul li a{
+    font-size: .6rem;
+}
+.black_icon{
+    position: absolute;
+    top: 0px; 
+    opacity: 0;
+}
+
+header:hover .black_icon{
+    opacity: 1;
+ 
+}
+
+.right_header ul li:hover  .hidden_button ul{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.right_header ul li img{
+    height: 1.4rem;
+    width: 1.4rem;
+}
+
+
+
+.slider img{
+    width: 100%;
+}
