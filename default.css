@@ -5,7 +5,7 @@ html{
 body{
     font-size: 1rem;
     margin: 0;
-    background-color: black;
+    font-family: 'Open Sans', sans-serif;
 }
 
 *{
@@ -15,10 +15,15 @@ body{
 a{
     text-decoration: none;
     color: #000000;
+
 }
 
 h1{
     margin: 0;
+}
+
+h4{
+    margin: .4rem 0 .4rem 0;
 }
 
 ul{
@@ -38,7 +43,9 @@ p{
     padding: 0;
 }
 
-/*************************헤더영역 만들기******************************************/
+
+
+/************************        헤더영역            *****************************************/
 
 header{
     position: absolute;
@@ -58,18 +65,8 @@ header:hover {
     display: flex;
     justify-content: space-between;
 }
-/* 헤더 왼쪽 부분 */
-.left_header{
-    display: flex;
-    align-items: center;
-}
-.left_header a{
-    height: 100%;
-    line-height: 100%;
-    padding: 1.25rem 0 0 0;
-    margin: 0 1.75rem 0 0;
-   
-}
+
+
 
 /*------------------------ 로고---------------------- */
 
@@ -97,10 +94,23 @@ header:hover .logo_white {
     width: 6.5rem;
     height: 2rem;
 }
+.logo a{
+    height: 100%;
+    line-height: 100%;
+    padding: 1.25rem 0 0 0;
+    margin: 0 1.75rem 0 0; 
+}
 
 /*----------------- 로고------------------ */
 
+
 /*------------------- 레프트 헤더 네비게이션----------------------- */
+.left_header{
+    display: flex;
+    align-items: center;
+}
+
+
 .left_header nav{
     height: 100%;
 }
@@ -118,6 +128,7 @@ header:hover .logo_white {
 }
 
 .top_menu h1{
+    position: relative;
     font-size: .75rem;
     font-weight: 550;
 }
@@ -125,7 +136,26 @@ header:hover .logo_white {
 header:hover .top_menu h1{
     color: black;
 }
-/* 네비 숨겨진 부분 */
+
+.top_menu h1::after{
+    content: '';
+    position: absolute;
+    background: #000000;
+    width: 100%;
+    height: 0.15rem;
+    left: 0;
+    top: 2.55rem;
+    /* 기준이 h1아닌가? */
+    transform: scale(0 , 1);
+    transform-origin: bottom left;
+    transition: transform 300ms ease;
+}
+
+.top_menu:hover h1::after {
+    transform: scale(1 , 1);
+}
+
+/* 네비 다운메뉴 부분 */
 .menu_content{
     background-color: #ffffff;
     position: absolute;
@@ -136,29 +166,28 @@ header:hover .top_menu h1{
     cursor: default;
     opacity: 0;
     visibility: hidden;
-    transition: 300ms ease-out;
+    transition: 250ms ease-out;
     border-top: 1px solid gainsboro;
 }
 
 .top_menu.women:hover .menu_content.women,
 .top_menu.men:hover .menu_content.men,
 .top_menu.collabo:hover .menu_content.collabo,
-.top_menu.community:hover .menu_content.community,
-.top_menu.kids:hover .menu_content.kids{
+.top_menu.kids:hover .menu_content.kids,
+.top_menu.community:hover .menu_content.community{
     opacity: 1;
     visibility: visible;    
 }
 
-
 .content_container{ 
-    /* 네비 오픈 텍스트 - 이미지 양끝정렬 */
     display: flex;
     justify-content: space-between;
     width: 66rem;
     margin: 0 auto;
     padding: 2.5rem 0 0 0;
 }
-/* 디테일 메뉴 텍스트 부분 */
+
+/* 다운 메뉴 텍스트 파트 */
 .container_list{
     display: flex;
     padding: 0 0 1.75rem 0;
@@ -170,15 +199,21 @@ header:hover .top_menu h1{
 
 .container_list ul:first-child li {
     color: #1a1a1a;
-    padding: 0 7.5rem 1rem 0;
+    padding: .5rem 6.5rem .5rem 0;
+}
+
+.container_list ul:first-child li a {
+    padding: .4rem 1rem .4rem 0
 }
 
 .container_list ul:nth-child(n+2) li{
-    padding: .4rem 0 .4rem 2rem;
+    padding: .4rem 0 .4rem 3rem;
 }
 
 .container_list ul:nth-child(n+2) li a{
     color: #828282;
+    padding: .4rem 1rem .4rem 0;
+    width: 100%;
 }
 
 .container_list ul:nth-child(n+2) li a span{
@@ -189,10 +224,107 @@ header:hover .top_menu h1{
     border-left: 1px solid #e5e5e5;
 }
 
+    /* 커뮤니티  다운메뉴 텍스트 파트*/
+.community_container_list{
+    position: relative;
+    display: flex;
+    padding: 0 6rem 1.75rem 0;
+}
 
-/* 디테일 메뉴 이미지 부분*/
+.community_container_list ul li{
+    font-size: 0.7rem;
+    color: #1a1a1a;
+    padding: 0.5rem 14.5rem .5rem 0;
+}
+
+.community_container_list ul li a{
+        padding: 5px 20px 5px 0;
+        margin: 0;
+}
+
+
+/* 다운메뉴 텍스트 리스트 호버 효과 */
+.container_list ul li a,
+.community_container_list ul li a,
+.community_event_list ul li a{
+    position: relative;
+}
+
+.container_list ul li a::after{
+    content: '';
+    width: .3rem;
+    height: .3rem;
+    position: absolute;
+    top: 0.6rem;
+    right: 1rem;
+    border-radius: 50%;
+    background: rgb(194, 0, 0);
+    transition: 300ms;
+    opacity: 0;
+}
+
+.community_container_list ul li a::after,
+.community_event_list ul li a::after{
+    content: '';
+    width: .3rem;
+    height: .3rem;
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    border-radius: 50%;
+    background: rgb(194, 0, 0);
+    transition: 300ms;
+    opacity: 0;
+}
+
+.container_list ul li a:hover::after,
+.community_container_list ul li a:hover::after,
+.community_event_list ul li a:hover::after{
+    transform: translate(10px , -6px);
+    opacity: 1;
+}
+
+
+
+
+/*  --- 커뮤니티 디테일 메뉴 내 이벤트 부분 리스트  ----*/
+.community_event_list{
+    display: flex;
+    align-items: center;  
+}
+
+.community_event_list ul{
+    position: absolute;
+    right:  5.5rem;
+    top:6rem;
+}
+
+.community_event_list ul li{
+    border-left: 1px solid #e5e5e5;
+    padding: 0.25rem 1rem 0.25rem 2rem;
+    
+}
+
+.community_event_list ul li a{
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    margin: 0;
+    color: #828282;
+}
+
+
+
+/* 다운네비 이미지 부분 */
 .container_image{
-    padding: 0 0 3.5rem 0;
+    display: flex;
+    padding: 1.25rem 0 3.5rem 0;
+}
+
+.container_image a {
+    position: relative;
+    width: 10rem;
+    height: 14.5rem;
+    padding: 0 0 0 0;
+    margin: 0 1.75rem 0 0; 
 }
 
 .container_image a img {
@@ -200,39 +332,25 @@ header:hover .top_menu h1{
     height: 14.5rem;
     object-fit: cover;
 }
-
-.community_container_list{
-    position: relative;
+  /* --다운네비 이미지 호버--   */
+.image_description{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10rem;
+    height: 14.5rem;
+    background: #00000070;
+    color: #ffffff;
     display: flex;
-    padding: 0 6rem 1.75rem 0;
-}
-.community_container_list ul li{
-    font-size: 0.7rem;
-    color: #1a1a1a;
-    padding: 0.5rem 14.5rem .5rem 0;
-}
-
-
-/* 커뮤니티 내 이벤트 부분 리스트 */
-
-.community_event_list{
-    pisplay: flex;
-    align-items: center;  
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 300ms;
 }
 
-.community_event_list ul{
-   position: absolute;
-   right:  5.5rem;
-   top:6rem;
-}
-
-.community_event_list ul li{
-    border-left: 1px solid #e5e5e5;
-    padding: 0.25rem 0 0.25rem 2rem;
-    
-}
-.community_event_list ul li a{
-    color: #828282;
+.container_image a:hover .image_description {
+    opacity: 1;
 }
 
 
@@ -264,7 +382,6 @@ header:hover .top_menu h1{
     border-top: 1px solid #808080;
     transition: 300ms;
 }
-
 .hidden_button ul li {
     width: 3.9rem;
     margin: auto;
@@ -274,16 +391,18 @@ header:hover .top_menu h1{
 .hidden_button ul li a{
     font-size: .6rem;
 }
+
+
 .black_icon{
     position: absolute;
     top: 0px; 
     opacity: 0;
 }
-
 header:hover .black_icon{
     opacity: 1;
  
 }
+
 
 .right_header ul li:hover  .hidden_button ul{
     opacity: 1;
@@ -298,3 +417,5 @@ header:hover .black_icon{
 .slider img{
     width: 100%;
 }
+
+/************************헤더********************************/
