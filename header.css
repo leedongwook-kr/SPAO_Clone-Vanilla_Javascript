@@ -52,6 +52,7 @@ header{
     transition: 300ms;
     cursor: default;
     width: 100%;
+    z-index: 1;
 }
 
 header:hover {
@@ -59,11 +60,13 @@ header:hover {
 }
 
 .header_container {
-    width: 85.5rem;
+    max-width: 85.5rem;
+    min-width: 70.5rem;
     height: 4.5rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -414,8 +417,4 @@ header:hover .black_icon{
     width: 1.4rem;
 }
 
-.slider img{
-    width: 100%;
-}
 
-/************************헤더********************************/

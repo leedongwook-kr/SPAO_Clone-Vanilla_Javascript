@@ -1,0 +1,89 @@
+html{
+    font-size: 20px;
+}
+
+body{
+    font-size: 1rem;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+button{
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+
+#banner_wrapper{
+    max-width: 100%;
+    height: 44rem;
+    position: relative;
+}
+
+/*   이미지      */
+.banner_images{
+    position: relative;
+}
+
+.image{
+    position: absolute;
+    top: 0;
+    transition: 500ms;
+}
+
+/*    좌우버튼   */
+.next_arrow{
+    color: #ffffff40;
+    position: absolute;
+    top: 22rem;
+    right: .9rem;
+    font-size: 3rem;
+    z-index: 1;
+    transition: all 200ms;
+}
+
+.prev_arrow{
+    color: #ffffff40;
+    position: absolute;
+    top: 22rem;
+    left: .9rem;
+    font-size: 3rem;
+    z-index: 1;
+    transition: all 200ms;
+}
+
+
+.next_arrow:hover , .prev_arrow:hover{
+    color: #ffffff90;
+}
+
+/*   하단 뱃지 버튼   */
+.btns_container{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    bottom:1.5rem;
+    width: 100%;
+    height: 12px;  
+}
+
+.badge_btn{
+    height: 12px;
+    width: 12px;
+    background-color: #ffffff20;
+    margin: 0 4px;
+    border-radius: 50%;
+    transition: all 300ms;
+}
+
+.badge_btn.checked{
+    background-color: #ffffff80; 
+}
+
+.badge_btn:hover{
+    background-color: #ffffff80;
+}

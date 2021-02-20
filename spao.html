@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPAO</title>
     <script src="https://kit.fontawesome.com/e1654d53c0.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="banner.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -299,12 +300,31 @@
         </div>
     </header>
 
-    <section id="head">
-        <div class="slider">
-            <img src="images/slide1.jpg" alt="">
+    <section id="banner_wrapper">
+        <div class="banner_images">
+            <img src="images/slide1.jpg" alt="슬라이드1" class="image">
+            <img src="images/slide2.jpg" alt="슬라이드2" class="image">
+            <img src="images/slide3.jpg" alt="슬라이드3" class="image">
+            <img src="images/slide4.jpg" alt="슬라이드4" class="image">
+        </div>
+        <button class="next_arrow" onclick="plusDivs(+1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <button class="prev_arrow" onclick="plusDivs(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="btns_container">
+            <span class="badge_btn" onclick="currentDiv(1)"></span>
+            <span class="badge_btn" onclick="currentDiv(2)"></span>
+            <span class="badge_btn" onclick="currentDiv(3)"></span>
+            <span class="badge_btn" onclick="currentDiv(4)"></span>
         </div>
     </section>
 
+
+
+
+    <script src="banner.js"></script>
 </body>
 
 </html>
