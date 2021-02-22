@@ -29,7 +29,7 @@ function showDivs(n) {
 setInterval(() => {
     slideIndex += 1;
     showDivs(slideIndex);
-}, 3000);
+}, 5000);
 
 
 /*   손수 짠 개똥코드 ^,^

@@ -43,6 +43,11 @@ p{
     padding: 0;
 }
 
+button{
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
 
 
 /************************        헤더영역            *****************************************/
@@ -331,7 +336,7 @@ header:hover .top_menu h1{
 }
 
 .container_image a img {
-    width: 10rem;
+    width:  10rem;
     height: 14.5rem;
     object-fit: cover;
 }
@@ -418,3 +423,79 @@ header:hover .black_icon{
 }
 
 
+/***************************    헤더 끝      **********************************/
+
+
+/* ***********************    배너 시작  ********************************** */
+#banner_wrapper{
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+/*   이미지      */
+.banner_images{
+    position: relative;
+}
+
+.image{
+    position: absolute;
+    top: 0;
+    transition: 500ms ease-out;
+    max-width: 100%;
+    object-fit: ;
+}
+
+/*    좌우버튼   */
+.next_arrow{
+    color: #ffffff40;
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    font-size: 3rem;
+    z-index: 1;
+    transition: all 300ms;
+}
+
+.prev_arrow{
+    color: #ffffff40;
+    position: absolute;
+    top: 22rem;
+    left: .9rem;
+    font-size: 3rem;
+    z-index: 1;
+    transition: all 300ms;
+}
+
+
+.next_arrow:hover , .prev_arrow:hover{
+    color: #ffffff90;
+}
+
+/*   하단 뱃지 버튼   */
+.btns_container{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    bottom:1.5rem;
+    width: 100%;
+    height: 12px;  
+}
+
+.badge_btn{
+    height: 12px;
+    width: 12px;
+    background-color: #ffffff20;
+    margin: 0 4px;
+    border-radius: 50%;
+    transition: all 300ms;
+}
+
+.badge_btn.checked{
+    background-color: #ffffff80; 
+}
+
+.badge_btn:hover{
+    background-color: #ffffff80;
+}

@@ -1,9 +1,11 @@
 html{
     font-size: 20px;
+    height: 100%;
 }
 
 body{
     font-size: 1rem;
+    height: 100%;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
@@ -19,41 +21,38 @@ button{
 }
 
 #banner_wrapper{
-    max-width: 100%;
-    height: 44rem;
+    min-width: 1260px;
+    min-height: 554px;
+    width: 100%;
+    height:  44vw;
     position: relative;
 }
-
 /*   이미지      */
-.banner_images{
-    position: relative;
-}
-
 .image{
+    height: auto;
     position: absolute;
-    top: 0;
-    transition: 500ms;
+    transition: 500ms ease-out;
 }
 
 /*    좌우버튼   */
 .next_arrow{
-    color: #ffffff40;
+    color: #ffffff20;
     position: absolute;
-    top: 22rem;
+    top: 50%;
     right: .9rem;
     font-size: 3rem;
     z-index: 1;
-    transition: all 200ms;
+    transition: all 300ms;
 }
 
 .prev_arrow{
-    color: #ffffff40;
+    color: #ffffff20;
     position: absolute;
-    top: 22rem;
+    top: 50%;
     left: .9rem;
     font-size: 3rem;
     z-index: 1;
-    transition: all 200ms;
+    transition: all 300ms;
 }
 
 
