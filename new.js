@@ -13,7 +13,7 @@ function nextNew() {
 }
 
 function prevNew() {
-    if (position >= 2) {
+    if (position >= 1) {
         newLists.style.transform = `translateX(calc(-100% /7 * ${position - 1} ))`;
         position -= 1
     } else {
@@ -21,6 +21,10 @@ function prevNew() {
         newLists.style.transform = `translateX(calc(-100% /7 * ${position} `;
     }
 }
+
+setInterval(() => {
+    nextNew();
+}, 8000);
 
 /******************************************************************* */
 
@@ -43,8 +47,14 @@ for (let n = 0; n < coverIcons.length; n++) {
     })
 };
 
+
+
 /******************************************************************** */
 const heartIcons = document.querySelectorAll('.icon');
 const heartRedIcons = document.querySelectorAll('.icon_red');
 
-for (let n = 0; n < heartIcons.length; n++)l
+for (let n = 0; n < heartIcons.length; n++) {
+    heartIcons[n].addEventListener("click", () => {
+
+    })
+}

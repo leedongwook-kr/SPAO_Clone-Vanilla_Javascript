@@ -1,7 +1,17 @@
 let i;
 let x = document.querySelectorAll(".image");
 let dots = document.querySelectorAll(".badge_btn");
+const header = document.querySelector('header');
 
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+})
+
+/************************************************ */
 let slideIndex = 1;
 showDivs(slideIndex);
 

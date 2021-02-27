@@ -67,7 +67,7 @@ section{
 /************************        헤더영역            *****************************************/
 
 header{
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     transition: 300ms;
@@ -109,7 +109,6 @@ header:hover {
 header:hover .logo_red {
     opacity: 1;
 }
-
 header:hover .logo_white {
     opacity: 0;
 }
@@ -156,6 +155,7 @@ header:hover .logo_white {
     font-size: .75rem;
     font-weight: 550;
 }
+
 
 header:hover .top_menu h1{
     color: black;
@@ -423,7 +423,6 @@ header:hover .top_menu h1{
 }
 header:hover .black_icon{
     opacity: 1;
- 
 }
 
 
@@ -437,8 +436,23 @@ header:hover .black_icon{
     width: 1.4rem;
 }
 
+/*-----------------  헤더 스크롤시 고정   -----------------*/
+header.scrolled{
+    background-color: white;
+}
+header.scrolled .logo_red,
+header.scrolled .black_icon {
+    opacity: 1;
+}
+header.scrolled .logo_white {
+    opacity: 0;
+}
+header.scrolled .top_menu h1{
+    color: black;
+}
 
-/***************************        
+
+/***************************        헤더 끝 */  
 
 
 /* ***********************    배너 시작              ****************** */
@@ -527,14 +541,14 @@ header:hover .black_icon{
 }
 /********************       배너 끝              ********************/
 
-/*********************       new                ***********************/
+/*********************       new 섹션 시작           ***********************/
 
 #new{
      min-width: 61.25rem;
      margin: 4rem auto;
      position: relative;
 }
-    
+/*  -----------   화살표 시작   --------------  */    
 .next_arrow.new , .prev_arrow.new{
     color: rgb(226, 226, 226);
 } 
@@ -542,7 +556,7 @@ header:hover .black_icon{
 .next_arrow.new:hover , .prev_arrow.new:hover{
     color: rgb(129, 129, 129);
 }
-
+/*  -----------   화살표 end   --------------  */    
 .slide_display{
     max-width: 1720px;
     width: 90%;
@@ -569,10 +583,19 @@ header:hover .black_icon{
     background-color: #000000;
 }
 
-.image_block{
+.image_container{
     display: block;
     max-width: 414px;
     max-height: 612px;
+}
+
+.image_cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: #ffffff50;
+    opacity: 0;
 }
 
 .image_cover_info{
@@ -581,10 +604,11 @@ header:hover .black_icon{
     right: 15px;
     opacity: 0;
     visibility: hidden;
-    transition: 400ms;
+    transition: 300ms;
     transform: translateY(10px);
 }
 
+.image_info:hover .image_cover,
 .image_info:hover .image_cover_info{
     opacity: 1;
     visibility: visible;
@@ -675,3 +699,4 @@ header:hover .black_icon{
 }
 
 
+/**************        new 섹션 끝         *************************/
