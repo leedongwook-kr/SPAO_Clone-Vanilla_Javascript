@@ -8,8 +8,6 @@
     <title>SPAO</title>
     <script src="https://kit.fontawesome.com/e1654d53c0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="banner.css">
-
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -22,7 +20,9 @@
                     <a href="">
                         <img src="images/top_logo_pc_wh.png" alt="스파오" class="logo_white">
                     </a>
-                    <img src="images/top_logo_pc.png" alt="스파오 레드" class="logo_red">
+                    <a href="">
+                        <img src="images/top_logo_pc.png" alt="스파오 레드" class="logo_red">
+                    </a>
                 </div>
                 <nav>
                     <ul>
@@ -302,10 +302,10 @@
     </header>
 
     <section id="banner_wrapper">
-        <img src="images/slide1.jpg" alt="슬라이드1" class="image">
-        <img src="images/slide2.jpg" alt="슬라이드2" class="image">
-        <img src="images/slide3.jpg" alt="슬라이드3" class="image">
-        <img src="images/slide4.jpg" alt="슬라이드4" class="image">
+        <a href=""><img src="images/slide1.jpg" alt="슬라이드1" class="image"></a>
+        <a href=""><img src="images/slide2.jpg" alt="슬라이드2" class="image"></a>
+        <a href=""><img src="images/slide3.jpg" alt="슬라이드3" class="image"></a>
+        <a href=""><img src="images/slide4.jpg" alt="슬라이드4" class="image"></a>
 
         <button class="next_arrow" onclick="plusDivs(+1)">
             <i class="fas fa-chevron-right"></i>
@@ -318,14 +318,205 @@
             <span class="badge_btn" onclick="currentDiv(2)"></span>
             <span class="badge_btn" onclick="currentDiv(3)"></span>
             <span class="badge_btn" onclick="currentDiv(4)"></span>
+
+
         </div>
     </section>
 
 
-    <section id="new"></section>
+    <section id="new">
+        <h2 style="text-align:center;">WHAT'S NEW</h2>
+        <button class="next_arrow new" onclick="nextNew()">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <button class="prev_arrow new" onclick="prevNew()">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="slide_display">
+            <ul class="new_lists">
+                <li class="new_list">
+                    <div class="image_info">
+                        <a href="" class="image_block">
+                            <img src="images/new1.jpg" class="product_img" alt="신상품">
+                        </a>
+                        <div class="image_cover_info">
+                            <img src="images/product_cover_icon.png" alt="상품 상세 보기" class="cover_icon">
+                            <ul class="new_size_color">
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product_information">
+                        <a href="">적당히 이쁜 카디건</a>
+                        <img src="images/icon_heart.png" alt="하트 아이콘" class="icon">
+                        <img src="images/icon_heart_red.png" alt="하트 아이콘 레드" class="icon_red">
+                        <h3>19,900</h3>
+                        <p>리뷰 0건</p>
+                    </div>
+                </li>
+                <li class="new_list">
+                    <div class="image_info">
+                        <a href="" class="image_block">
+                            <img src="images/new2.jpg" class="product_img" alt="신상품">
+                        </a>
+                        <div class="image_cover_info">
+                            <img src="images/product_cover_icon.png" alt="상품 상세 보기" class="cover_icon">
+                            <ul class="new_size_color">
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product_information">
+                        <a href="">적당히 이쁜 카디건</a>
+                        <img src="images/icon_heart.png" alt="하트 아이콘" class="icon">
+                        <img src="images/icon_heart_red.png" alt="하트 아이콘 레드" class="icon_red">
+                        <h3>19,900</h3>
+                        <p>리뷰 0건</p>
+                    </div>
+                </li>
+                <li class="new_list">
+                    <div class="image_info">
+                        <a href="" class="image_block">
+                            <img src="images/new3.jpg" class="product_img" alt="신상품">
+                        </a>
+                        <div class="image_cover_info">
+                            <img src="images/product_cover_icon.png" alt="상품 상세 보기" class="cover_icon">
+                            <ul class="new_size_color">
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product_information">
+                        <a href="">적당히 이쁜 카디건</a>
+                        <img src="images/icon_heart.png" alt="하트 아이콘" class="icon">
+                        <img src="images/icon_heart_red.png" alt="하트 아이콘 레드" class="icon_red">
+                        <h3>19,900</h3>
+                        <p>리뷰 0건</p>
+                    </div>
+                </li>
+                <li class="new_list">
+                    <div class="image_info">
+                        <a href="" class="image_block">
+                            <img src="images/new4.jpg" class="product_img" alt="신상품">
+                        </a>
+                        <div class="image_cover_info">
+                            <img src="images/product_cover_icon.png" alt="상품 상세 보기" class="cover_icon">
+                            <ul class="new_size_color">
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product_information">
+                        <a href="">적당히 이쁜 카디건</a>
+                        <img src="images/icon_heart.png" alt="하트 아이콘" class="icon">
+                        <img src="images/icon_heart_red.png" alt="하트 아이콘 레드" class="icon_red">
+                        <h3>19,900</h3>
+                        <p>리뷰 0건</p>
+                    </div>
+                </li>
+                <li class="new_list">
+                    <div class="image_info">
+                        <a href="" class="image_block">
+                            <img src="images/new5.jpg" class="product_img" alt="신상품">
+                        </a>
+                        <div class="image_cover_info">
+                            <img src="images/product_cover_icon.png" alt="상품 상세 보기" class="cover_icon">
+                            <ul class="new_size_color">
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product_information">
+                        <a href="">적당히 이쁜 카디건</a>
+                        <img src="images/icon_heart.png" alt="하트 아이콘" class="icon">
+                        <img src="images/icon_heart_red.png" alt="하트 아이콘 레드" class="icon_red">
+                        <h3>19,900</h3>
+                        <p>리뷰 0건</p>
+                    </div>
+                </li>
+                <li class="new_list">
+                    <div class="image_info">
+                        <a href="" class="image_block">
+                            <img src="images/new6.jpg" class="product_img" alt="신상품">
+                        </a>
+                        <div class="image_cover_info">
+                            <img src="images/product_cover_icon.png" alt="상품 상세 보기" class="cover_icon">
+                            <ul class="new_size_color">
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product_information">
+                        <a href="">적당히 이쁜 카디건</a>
+                        <img src="images/icon_heart.png" alt="하트 아이콘" class="icon">
+                        <img src="images/icon_heart_red.png" alt="하트 아이콘 레드" class="icon_red">
+                        <h3>19,900</h3>
+                        <p>리뷰 0건</p>
+                    </div>
+                </li>
+                <li class="new_list">
+                    <div class="image_info">
+                        <a href="" class="image_block">
+                            <img src="images/new7.jpg" class="product_img" alt="신상품">
+                        </a>
+                        <div class="image_cover_info">
+                            <img src="images/product_cover_icon.png" alt="상품 상세 보기" class="cover_icon">
+                            <ul class="new_size_color">
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+                                <li>size-color</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product_information">
+                        <a href="">적당히 이쁜 카디건</a>
+                        <img src="images/icon_heart.png" alt="하트 아이콘" class="icon">
+                        <img src="images/icon_heart_red.png" alt="하트 아이콘 레드" class="icon_red">
+                        <h3>19,900</h3>
+                        <p>리뷰 0건</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
 
 
     <script src="banner.js"></script>
+    <script src="new.js"></script>
 </body>
 
 </html>
