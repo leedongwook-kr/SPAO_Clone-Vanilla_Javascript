@@ -8,7 +8,7 @@ function nextNew() {
         position += 1
     } else {
         position = 0;
-        newLists.style.transform = `translateX(calc(-100% /7 * ${position} `;
+        newLists.style.transform = `translateX(calc(-100% /7 * ${position} )) `;
     }
 }
 
@@ -18,7 +18,7 @@ function prevNew() {
         position -= 1
     } else {
         position = 3;
-        newLists.style.transform = `translateX(calc(-100% /7 * ${position} `;
+        newLists.style.transform = `translateX(calc(-100% /7 * ${position} )) `;
     }
 }
 
@@ -58,3 +58,6 @@ for (let n = 0; n < heartIcons.length; n++) {
 
     })
 }
+
+
+/**************************************************************** */

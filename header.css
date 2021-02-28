@@ -23,9 +23,10 @@ h1{
 }
 
 h2{
-    font-weight: 1200;
-    font-size: 30px;
-    margin: 25px 0;
+    font-weight: 900;
+    font-size: 40px;
+    padding: 66px 0;
+    text-align: center;
 }
 
 h3{
@@ -61,7 +62,9 @@ button{
 }
 
 section{
-    margin: 2rem 0;
+    min-width: 61.25rem;
+     /* margin: 4rem auto; */
+     position: relative;
 }
 
 /************************        헤더영역            *****************************************/
@@ -388,7 +391,7 @@ header:hover .top_menu h1{
 
 .right_header ul li{
     display: inline-block;
-    padding: 1.6rem 1.25rem 1.25rem 1.25rem;
+    padding: 1.6rem 1rem 1.25rem 1rem;
 }
 
 .white_icon{
@@ -397,7 +400,7 @@ header:hover .top_menu h1{
 
 .hidden_button ul{
     position: absolute;
-    right: 12.75rem;
+    right: 10.75rem;
     top: 4.5rem;
     background-color: white;
     opacity: 0;
@@ -573,9 +576,7 @@ header.scrolled .top_menu h1{
 }
 
 .new_list{
-    width: 23%;
     margin: 0 10px 100px 10px;
-    display: inline-block;    
 }
 
 .image_info{
@@ -700,3 +701,71 @@ header.scrolled .top_menu h1{
 
 
 /**************        new 섹션 끝         *************************/
+/*****************       style pick 섹션 시작                **************************/
+#style_pick{
+    background-color: #687a6e;
+    position: relative;
+}
+
+#style_pick h2{
+    color: #ffffff;
+    
+}
+
+#style_pick .image_container{
+    display: block;
+    max-height: 825px;
+    max-width: 558px;
+}
+
+.style_pick_lists{
+    width: calc(100% /3 *7);
+    display: flex;
+    transition: 500ms;
+}
+
+.style_pick_list{
+    width: 33%;
+    margin: 0 10px 160px 10px;
+}
+
+#style_pick .product_information a,
+#style_pick .product_information h3{
+    color: #ffffff;
+}
+
+
+.style_pick_switch_btns{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    bottom:3rem;
+    width: 100%;
+    height: 14px;
+    z-index: 1;
+}
+
+.style_pick_switch_btn{
+    margin: 0px;
+    height:14px;
+    width: 14px;
+    background-color: #ffffff20;
+    margin: 0 4px;
+    border-radius: 50%;
+    transition: all 300ms;
+    cursor: pointer;
+}
+.style_pick_switch_btn:hover{
+ background-color: #ffffff80;
+}
+
+.style_pick_switch_btn.checked{
+background-color: #ffffff80;
+}
+
+/*****************       style pick 섹션 끝                **************************/
+
+.mid_banner{
+    display: flex;
+    margin: 130px 0 0 0;
+}
