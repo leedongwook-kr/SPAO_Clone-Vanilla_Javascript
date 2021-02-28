@@ -725,7 +725,7 @@ header.scrolled .top_menu h1{
 }
 
 .style_pick_list{
-    width: 33%;
+    width: calc(100% /3 *7 /3);
     margin: 0 10px 160px 10px;
 }
 
@@ -769,3 +769,50 @@ background-color: #ffffff80;
     display: flex;
     margin: 130px 0 0 0;
 }
+
+.mid_banner a img {
+    width: 100%;
+    min-width: 840px;
+}
+
+/**********************   Weekly Best ********************************/
+
+#weekly_best{
+    position: relative;
+}
+#weekly_best button {
+    cursor: pointer;
+}
+
+.best_division ul{
+    text-align: center;
+}
+.best_division ul li{
+    display: inline-block;
+    padding: 5px 20px 5px 20px;
+    margin: 45px 0 45px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.weekly_best_list{
+    width: 23%;
+    margin: 0 10px 0 10px;
+    display: inline-block;
+}
+
+
+#weekly_best .slide_display{
+    transition: 300ms;
+    display: none;
+}
+
+#weekly_best .slide_display.visible.anim{
+    transform: translateY(-50px);
+}
+
+#weekly_best .slide_display.visible{
+    display: block;
+    transform: translateY(0px)
+}
+
