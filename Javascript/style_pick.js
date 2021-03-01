@@ -10,20 +10,12 @@ for (let i = 0; i < stylePickSwitchBtns.length; i++) {
 }
 
 function nextStylePick() {
-    if (positionStyle === 4) {
-        positionStyle = 0
-    } else {
-        positionStyle += 1;
-    }
+    positionStyle += 1;
     lightStylePickSwitchBtn(positionStyle);
 }
 
 function prevStylePick() {
-    if (positionStyle === 0) {
-        positionStyle = 4
-    } else {
-        positionStyle -= 1;
-    }
+    positionStyle -= 1;
     lightStylePickSwitchBtn(positionStyle);
 }
 
@@ -32,13 +24,53 @@ function lightStylePickSwitchBtn(num) {
     for (let i = 0; i < stylePickSwitchBtns.length; i++) {
         stylePickSwitchBtns[i].classList.remove('checked');
     }
-    stylePickSwitchBtns[num].classList.add('checked');
-    showCurrentStylePick(num)
+    if (num >= 7) {
+        num -= 7;
+        stylePickSwitchBtns[num].classList.add('checked');
+    } else if (num < 0) {
+        num += 7
+        stylePickSwitchBtns[num].classList.add('checked');
+    } else {
+        stylePickSwitchBtns[num].classList.add('checked');
+    }
+    showCurrentStylePick(positionStyle);
+}
+
+
+function moveStyleSlide() {
+    stlyePickLists.style.transition = '700ms';
+    stlyePickLists.style.transform = `translateX(calc(-100% /10 *${positionStyle}))`;
+}
+function switchStylePosition() {
+    stlyePickLists.style.transition = '0s';
+    stlyePickLists.style.transform = `translateX(calc(-100% /10 *${positionStyle}))`;
 }
 
 
 function showCurrentStylePick(num) {
     positionStyle = num;
-    stlyePickLists.style.transform = `translateX(calc(-100% /7 *${positionStyle}))`;
+    if (positionStyle === 8) {
+        // 끝부분에서 뒤로
+        positionStyle = 0;
+        switchStylePosition();
+
+        setTimeout(() => {
+            positionStyle += 1
+            moveStyleSlide();
+        }, 30);
+
+    } else if (positionStyle === -1) {
+        // 첫부분에서 앞으로
+        positionStyle = 7;
+        switchStylePosition();
+
+        setTimeout(() => {
+            positionStyle -= 1
+            moveStyleSlide();
+        }, 30);
+    }
+    else {
+        moveStyleSlide();
+    }
 }
 

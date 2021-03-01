@@ -2,29 +2,53 @@ const newLists = document.querySelector(".new_lists");
 let position = 0;
 
 
+function moveNewSlide() {
+    newLists.style.transition = "700ms";
+    newLists.style.transform = `translateX(calc(-100% /11 * ${position} ))`;
+}
+function switchNewPosition() {
+    newLists.style.transition = "0s";
+    newLists.style.transform = `translateX(calc(-100% /11 * ${position} )) `;
+}
+
 function nextNew() {
-    if (position <= 2) {
-        newLists.style.transform = `translateX(calc(-100% /7 * ${position + 1} ))`;
-        position += 1
+    position += 1
+    if (position <= 7) {
+
+        moveNewSlide()
+
     } else {
         position = 0;
-        newLists.style.transform = `translateX(calc(-100% /7 * ${position} )) `;
+        switchNewPosition()
+        setTimeout(() => {
+            position += 1
+            moveNewSlide()
+        }, 30);
     }
+
+    /*클릭 방지하는 방법 찾기  */
 }
 
 function prevNew() {
-    if (position >= 1) {
-        newLists.style.transform = `translateX(calc(-100% /7 * ${position - 1} ))`;
-        position -= 1
+    position -= 1
+    if (position >= 0) {
+
+        moveNewSlide()
+
     } else {
-        position = 3;
-        newLists.style.transform = `translateX(calc(-100% /7 * ${position} )) `;
+        position = 7;
+        switchNewPosition()
+
+        setTimeout(() => {
+            position -= 1;
+            moveNewSlide()
+        }, 30);
     }
 }
 
-setInterval(() => {
-    nextNew();
-}, 8000);
+setInterval(nextNew, 7000);
+
+
 
 /******************************************************************* */
 
