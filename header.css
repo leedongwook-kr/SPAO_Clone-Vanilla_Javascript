@@ -8,7 +8,8 @@ body{
     margin: auto;
     font-family: 'Open Sans', sans-serif;
     align-items: center;
-        max-width: 1903px;
+    max-width: 1903px;
+    
 }
 
 *{
@@ -629,8 +630,7 @@ header.scrolled .top_menu h1{
     right: -15px;
     border: 1px solid rgb(167, 167, 167);
     padding: 16px;
-    background-color: #ffffff;
-    z-index: 1;
+    background-color: #fff;
     opacity: 0;
     visibility: hidden;
     transition: 500ms;
@@ -869,22 +869,19 @@ background-color: #ffffff80;
 }
 .trend a{
     display: block;
-    overflow: hidden;
 }
 
 .trend a:nth-child(odd){
     float: left;
     width: 48%;
     margin: 0 0 95px 0;
-
 }
-
 .trend a:nth-child(even){
     float: right;
     width: 48%;
-    margin: 95px 0 0 0;
-     
+    margin: 95px 0 0 0;    
 }
+
 .trend a div{
     overflow: hidden;
     position: relative;
@@ -903,7 +900,6 @@ background-color: #ffffff80;
     width: 100%;
     display: block;   
     transition: 300ms;
-   position: relative;
 }
 
 .trend a div:hover img,
@@ -912,14 +908,44 @@ background-color: #ffffff80;
     opacity: 1;
 }
 
-
-
 .trend a p{
     text-align: center;
     margin: 28px 0 0 0;
     font-weight: 600;
-    
 }
 
 
+/****************************/
+#look_book{
+    overflow: hidden;
+}
 
+#look_book .next_arrow , #look_book .prev_arrow{
+    top: 58%;
+}
+
+#look_book .slide_display ul{
+    width: 403%;
+    position: relative;
+    transform: translateX(calc( -10%));
+}
+
+#look_book .slide_display ul li{
+    display: inline-block;
+    max-width: 750px;
+    margin: 9px 9px;
+    width: calc(100% /9 - 18px);
+}
+
+#look_book .slide_display ul li div a img{
+    width: 100%;
+}
+
+
+#look_book .slide_display{
+    max-width: 1720px;
+    width: 90%;
+    margin: auto;
+    font-size: 0;
+    overflow: visible;
+}

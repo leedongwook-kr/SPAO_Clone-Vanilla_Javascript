@@ -62,6 +62,7 @@ for (const coverIcon of coverIcons) {
 }
 
 for (let n = 0; n < coverIcons.length; n++) {
+    console.log(coverIcons.length);
     coverIcons[n].addEventListener("click", () => {
         if (newSizeInfos[n].classList.contains("open_list") === false) {
             newSizeInfos[n].classList.add("open_list");

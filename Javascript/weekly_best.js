@@ -13,8 +13,6 @@ function showBest(num) {
     bestSlides[num].classList.add('show');
     setTimeout(() => {
         bestSlides[num].classList.add('visible');
-
-
     }, 1);
 
     clickedBtn.classList.remove('on');
