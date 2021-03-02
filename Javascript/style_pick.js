@@ -18,7 +18,7 @@ function prevStylePick() {
     positionStyle -= 1;
     lightStylePickSwitchBtn(positionStyle);
 }
-
+// 하단 뱃지버튼
 function lightStylePickSwitchBtn(num) {
     positionStyle = num;
     for (let i = 0; i < stylePickSwitchBtns.length; i++) {
@@ -46,7 +46,7 @@ function switchStylePosition() {
     stlyePickLists.style.transform = `translateX(calc(-100% /10 *${positionStyle}))`;
 }
 
-
+// 슬라이드 포지션 설정
 function showCurrentStylePick(num) {
     positionStyle = num;
     if (positionStyle === 8) {

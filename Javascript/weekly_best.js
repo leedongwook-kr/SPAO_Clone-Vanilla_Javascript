@@ -1,25 +1,23 @@
 
 
-
-
-
-
-
 const bestSlides = document.querySelectorAll('.slide_display.best');
-// const bestCategoryBtns = documet.querySelectorAll('.best_category_btn');
+const bestCategoryBtns = document.querySelectorAll('.best_category_btn');
 
 function showBest(num) {
-    for (let n = 0; n < bestSlides.length; n++) {
-        bestSlides[n].classList.remove('show');
-        bestSlides[n].classList.remove('visible');
-        // bestCategoryBtns[n].classList.remove('on');
-    }
+    const bestSlideVisible = document.querySelector('.show.visible');
+    const clickedBtn = document.querySelector('.on');
+
+    bestSlideVisible.classList.remove('show');
+    bestSlideVisible.classList.remove('visible');
 
     bestSlides[num].classList.add('show');
     setTimeout(() => {
         bestSlides[num].classList.add('visible');
-    }, 300);
 
-    // bestCategoryBtns[num].classList.add('on');
+
+    }, 1);
+
+    clickedBtn.classList.remove('on');
+    bestCategoryBtns[num].classList.add('on');
 }
 

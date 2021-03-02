@@ -1,3 +1,4 @@
+/* 전체영역 */
 html{
     font-size: 20px;
 }
@@ -65,6 +66,7 @@ section{
     min-width: 61.25rem;
      /* margin: 4rem auto; */
      position: relative;
+    margin: 0 0 80px 0;
 }
 
 /************************        헤더영역            *****************************************/
@@ -379,8 +381,8 @@ header:hover .top_menu h1{
     opacity: 1;
 }
 
-
-/* -------------------헤더 오른쪽----------------------------- */
+/* ------------------- 헤더 좌측 끝 ------------------- */
+/* -------------------헤더 오른쪽 시작----------------------------- */
 .right_header {
     position: relative;
 }
@@ -438,7 +440,7 @@ header:hover .black_icon{
     height: 1.4rem;
     width: 1.4rem;
 }
-
+/* -------------------헤더 오른쪽 끝----------------------------- */
 /*-----------------  헤더 스크롤시 고정   -----------------*/
 header.scrolled{
     background-color: white;
@@ -776,7 +778,7 @@ background-color: #ffffff80;
     min-width: 840px;
 }
 
-/**********************   Weekly Best ********************************/
+/**********************   위클리 베스트 시작 ********************************/
 
 #weekly_best{
     position: relative;
@@ -799,9 +801,36 @@ background-color: #ffffff80;
 }
 
 .best_division ul li.on{
-    font-weight: 800;
+    text-shadow: 0 0 1px #333, 0 0 1px #333;
+    /* weight 변경시 차지하는 자리의 변경으로 화면이 흔들려보임 */
+    /* offset-x | offset-y | blur-radius | color */
 }
 
+.best_division ul li div:first-child{
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    background-color: red;
+    border-radius: 50%;
+    top: 0px;
+    right: -8px;
+    opacity: 0;
+    transition: transform 300ms ease;
+}
+.best_division ul li div:last-child{
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    transform: scale(0 , 1);
+    transform-origin: bottom left;
+    transition: transform 300ms ease;
+}
+.best_division ul li.on div:first-child,
+.best_division ul li.on div:last-child{
+    transform: scale(1 , 1);
+    opacity: 1;
+}
 
 
 
@@ -830,4 +859,67 @@ background-color: #ffffff80;
     visibility: visible;
     transform: translateY(0px);
 }
+
+/**********************   위클리 베스트 끝 ********************************/
+
+/*********************  트렌드 시작 ****************************/
+
+.trend{
+    overflow: hidden;
+}
+.trend a{
+    display: block;
+    overflow: hidden;
+}
+
+.trend a:nth-child(odd){
+    float: left;
+    width: 48%;
+    margin: 0 0 95px 0;
+
+}
+
+.trend a:nth-child(even){
+    float: right;
+    width: 48%;
+    margin: 95px 0 0 0;
+     
+}
+.trend a div{
+    overflow: hidden;
+    position: relative;
+}
+.trend a div::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    background-color: #ffffff40;
+    width: 100%;
+    height: 100%;
+}
+
+.trend a div img {
+    width: 100%;
+    display: block;   
+    transition: 300ms;
+   position: relative;
+}
+
+.trend a div:hover img,
+.trend a div:hover::after {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+
+
+.trend a p{
+    text-align: center;
+    margin: 28px 0 0 0;
+    font-weight: 600;
+    
+}
+
+
 
