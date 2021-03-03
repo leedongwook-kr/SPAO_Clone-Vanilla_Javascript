@@ -11,42 +11,34 @@ function switchNewPosition() {
     newLists.style.transform = `translateX(calc(-100% /11 * ${position} )) `;
 }
 
-function nextNew() {
-    position += 1
-    if (position <= 7) {
-
-        moveNewSlide()
-
-    } else {
+function nextNew(num) {
+    position += num;
+    if (position === 8) {
         position = 0;
         switchNewPosition()
         setTimeout(() => {
-            position += 1
+            position += num
             moveNewSlide()
         }, 30);
+
+
+    } else if (position === -1) {
+        position = 7;
+        switchNewPosition()
+
+        setTimeout(() => {
+            position += num;
+            moveNewSlide()
+        }, 30);
+    } else {
+        moveNewSlide()
     }
 
     /*클릭 방지하는 방법 찾기  */
 }
 
-function prevNew() {
-    position -= 1
-    if (position >= 0) {
 
-        moveNewSlide()
-
-    } else {
-        position = 7;
-        switchNewPosition()
-
-        setTimeout(() => {
-            position -= 1;
-            moveNewSlide()
-        }, 30);
-    }
-}
-
-setInterval(nextNew, 7000);
+setInterval(nextNew(+1), 7000);
 
 
 

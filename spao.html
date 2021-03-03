@@ -329,10 +329,10 @@
     <!-- 뉴 섹션 -->
     <section id="new">
         <h2>WHAT'S NEW</h2>
-        <button class="next_arrow new" onclick="nextNew()">
+        <button class="next_arrow new" onclick="nextNew(+1)">
             <i class="fas fa-chevron-right"></i>
         </button>
-        <button class="prev_arrow new" onclick="prevNew()">
+        <button class="prev_arrow new" onclick="nextNew(-1)">
             <i class="fas fa-chevron-left"></i>
         </button>
         <div class="slide_display">
@@ -1473,6 +1473,133 @@
         </div>
     </section>
 
+    <section id="snap">
+        <button class="next_arrow" onclick="moveSnap(+1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <button class="prev_arrow" onclick="moveSnap(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <h2>Snap</h2>
+        <div class="slide_display">
+            <ul class="snap_lists">
+                <li>
+                    <a href=""><img src="images/snap1.jpg" alt="">
+                        <div>
+                            <h4>product</h4>
+                            <span>인플루언서</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href=""><img src="images/snap2.jpg" alt="">
+                        <div>
+                            <h4>product</h4>
+                            <span>인플루언서</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href=""><img src="images/snap3.jpg" alt="">
+                        <div>
+                            <h4>product</h4>
+                            <span>인플루언서</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href=""><img src="images/snap4.jpg" alt="">
+                        <div>
+                            <h4>product</h4>
+                            <span>인플루언서</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href=""><img src="images/snap5.jpg" alt="">
+                        <div>
+                            <h4>product</h4>
+                            <span>인플루언서</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href=""><img src="images/snap6.jpg" alt="">
+                        <div>
+                            <h4>product</h4>
+                            <span>인플루언서</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href=""><img src="images/snap7.jpg" alt="">
+                        <div>
+                            <h4>product</h4>
+                            <span>인플루언서</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href=""><img src="images/snap8.jpg" alt="">
+                        <div>
+                            <h4>product</h4>
+                            <span>인플루언서</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href=""><img src="images/snap9.jpg" alt="">
+                        <div>
+                            <h4>product</h4>
+                            <span>인플루언서</span>
+                        </div>
+                    </a>
+                </li>
+
+                <!-- 무한루프 -->
+                <li>
+                    <a href=""><img src="images/snap1.jpg" alt="">
+                        <div>
+                            <h4>product</h4>
+                            <span>인플루언서</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href=""><img src="images/snap2.jpg" alt="">
+                        <div>
+                            <h4>product</h4>
+                            <span>인플루언서</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href=""><img src="images/snap3.jpg" alt="">
+                        <div>
+                            <h4>product</h4>
+                            <span>인플루언서</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href=""><img src="images/snap4.jpg" alt="">
+                        <div>
+                            <h4>product</h4>
+                            <span>인플루언서</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href=""><img src="images/snap5.jpg" alt="">
+                        <div>
+                            <h4>product</h4>
+                            <span>인플루언서</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
 
 
     <script src="Javascript/banner.js"></script>
@@ -1480,6 +1607,7 @@
     <script src="Javascript/style_pick.js"></script>
     <script src="Javascript/weekly_best.js"></script>
     <script src="Javascript/look_book.js"></script>
+    <script src="Javascript/snap.js"></script>
 </body>
 
 </html>

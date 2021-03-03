@@ -464,10 +464,10 @@ header.scrolled .top_menu h1{
 /* ***********************    배너 시작              ****************** */
 
 #banner_wrapper{
-    max-height: 880px;
-    max-width: 1903px;
-    min-width: 1260px;
-    min-height: 554px;
+    max-height: 44rem;
+    max-width: 95.15rem;
+    min-width: 63rem;
+    min-height: 27.7rem;
     width: 100%;
     height: 46.24vw ;
     /* 높이가 안에 것들을 측정해 자동으로 왜 하지 못할까? */
@@ -526,12 +526,12 @@ header.scrolled .top_menu h1{
     justify-content: center;
     bottom:1.5rem;
     width: 100%;
-    height: 12px;  
+    height: .6rem;  
 }
 
 .badge_btn{
-    height: 12px;
-    width: 12px;
+    height: .6rem;
+    width: .6rem;
     background-color: #ffffff20;
     margin: 0 4px;
     border-radius: 50%;
@@ -564,7 +564,7 @@ header.scrolled .top_menu h1{
 }
 /*  -----------   화살표 end   --------------  */    
 .slide_display{
-    max-width: 1720px;
+    max-width: 86rem;
     width: 90%;
     margin: auto;
     overflow: hidden;
@@ -579,8 +579,7 @@ header.scrolled .top_menu h1{
 }
 
 .new_list{
-
-    margin: 0 10px 100px 10px;
+    margin: 0 .5rem 5rem .5rem;
 }
 
 .image_info{
@@ -590,8 +589,8 @@ header.scrolled .top_menu h1{
 
 .image_container{
     display: block;
-    max-width: 414px;
-    max-height: 612px;
+    max-width: 20.7rem;
+    max-height: 30.6rem;
 }
 
 .image_cover{
@@ -605,8 +604,8 @@ header.scrolled .top_menu h1{
 
 .image_cover_info{
     position: absolute;
-    bottom: 15px;
-    right: 15px;
+    bottom: .75rem;
+    right: .75rem;
     opacity: 0;
     visibility: hidden;
     transition: 300ms;
@@ -626,7 +625,7 @@ header.scrolled .top_menu h1{
 
 .new_size_color{
     position: absolute;
-    top: calc(100% + 15px);
+    top: calc(100% + .75rem);
     right: -15px;
     border: 1px solid rgb(167, 167, 167);
     padding: 16px;
@@ -646,10 +645,10 @@ header.scrolled .top_menu h1{
 
 .new_size_color li{
     position: relative;
-    font-size: 14px;
-    width: 220px;
+    font-size: .7rem;
+    width: 11rem;
     text-align: start;
-    padding: 5px;
+    padding: .25rem;
 }
 
 .new_size_color li::after{
@@ -670,7 +669,7 @@ header.scrolled .top_menu h1{
 }
 
 .product_information{
-    font-size: 15px;
+    font-size: .75rem;
     position: relative;
     margin: .7rem 0 0 0;
 }
@@ -697,7 +696,7 @@ header.scrolled .top_menu h1{
 }
 
 .product_information p{
-    font-size: 13px;
+    font-size: .65rem;
     padding: .5rem 0 0 0;
     color: #a3a3a3;
 }
@@ -717,8 +716,8 @@ header.scrolled .top_menu h1{
 
 #style_pick .image_container{
     display: block;
-    max-height: 825px;
-    max-width: 558px;
+    max-height: 41.25rem;
+    max-width: 27.9rem;
 }
 
 .style_pick_lists{
@@ -729,7 +728,7 @@ header.scrolled .top_menu h1{
 
 .style_pick_list{
     width: calc(100% /3 *10 /3);
-    margin: 0 10px 160px 10px;
+    margin: 0 .5rem 8rem .5rem;
 }
 
 #style_pick .product_information a,
@@ -744,16 +743,16 @@ header.scrolled .top_menu h1{
     justify-content: center;
     bottom:3rem;
     width: 100%;
-    height: 14px;
+    height: .7rem;
     z-index: 1;
 }
 
 .style_pick_switch_btn{
     margin: 0px;
-    height:14px;
-    width: 14px;
+    height:.7rem;
+    width: .7rem;
     background-color: #ffffff20;
-    margin: 0 4px;
+    margin: 0 .2rem;
     border-radius: 50%;
     transition: all 300ms;
     cursor: pointer;
@@ -770,12 +769,12 @@ background-color: #ffffff80;
 
 .mid_banner{
     display: flex;
-    margin: 130px 0 0 0;
+    margin: 6.5rem 0 0 0;
 }
 
 .mid_banner a img {
     width: 100%;
-    min-width: 840px;
+    min-width: 42rem;
 }
 
 /**********************   위클리 베스트 시작 ********************************/
@@ -793,8 +792,8 @@ background-color: #ffffff80;
 .best_division ul li{
     display: inline-block;
     padding: 0 0 0 0;
-    margin: 10px 20px 50px 20px;
-    font-size: 20px;
+    margin: .5rem 1rem 2.5rem 1rem;
+    font-size: 1rem;
     font-weight: 500;
     position: relative;
     transition: 300ms;
@@ -808,12 +807,12 @@ background-color: #ffffff80;
 
 .best_division ul li div:first-child{
     position: absolute;
-    height: 6px;
-    width: 6px;
+    height: .3rem;
+    width: .3rem;
     background-color: red;
     border-radius: 50%;
     top: 0px;
-    right: -8px;
+    right: -.4rem;
     opacity: 0;
     transition: transform 300ms ease;
 }
@@ -836,7 +835,7 @@ background-color: #ffffff80;
 
 .weekly_best_list{
     width: 23%;
-    margin: 0 10px 0 10px;
+    margin: 0 .5rem 0 .5rem;
     display: inline-block;
 }
 
@@ -850,7 +849,7 @@ background-color: #ffffff80;
 
 #weekly_best .slide_display.show{
     display: block;
-    transform: translateY(-40px);
+    transform: translateY(-2rem);
     opacity: .5;
 }
 
@@ -874,12 +873,12 @@ background-color: #ffffff80;
 .trend a:nth-child(odd){
     float: left;
     width: 48%;
-    margin: 0 0 95px 0;
+    margin: 0 0 4.75rem 0;
 }
 .trend a:nth-child(even){
     float: right;
     width: 48%;
-    margin: 95px 0 0 0;    
+    margin: 4.75rem 0 0 0;    
 }
 
 .trend a div{
@@ -910,7 +909,7 @@ background-color: #ffffff80;
 
 .trend a p{
     text-align: center;
-    margin: 28px 0 0 0;
+    margin: 1.4rem 0 0 0;
     font-weight: 600;
 }
 
@@ -932,20 +931,123 @@ background-color: #ffffff80;
 
 #look_book .slide_display ul li{
     display: inline-block;
-    max-width: 750px;
-    margin: 9px 9px;
-    width: calc(100% /9 - 18px);
+    max-width: 37.5rem;
+    margin: .45rem .45rem;
+    width: calc(100% /9 - 0.9rem);
+    position: relative;
+    overflow: hidden;
+}
+
+#look_book .slide_display ul li a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+    top: 0;
+    right: 0;
+    background-color: #ffffff50;
+    opacity: 0;
+}
+
+#look_book .slide_display ul li:hover a::after{
+    opacity: 1;
+}
+#look_book .slide_display ul li:hover img{
+    transform: scale(1.1);
 }
 
 #look_book .slide_display ul li div a img{
     width: 100%;
+    transition: 300ms;
 }
 
+#look_book .slide_display ul li div::after{
+    content: "SPAO";
+    position: absolute;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 4rem;
+    font-weight: 800;
+    top: 0;
+    right: 0;
+    
+}
+
+#look_book .slide_display ul li div p{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
 
 #look_book .slide_display{
-    max-width: 1720px;
-    width: 90%;
-    margin: auto;
-    font-size: 0;
+    
     overflow: visible;
+}
+
+/***********************   SNAP 섹션***************************** */
+
+
+#snap .next_arrow , #snap .prev_arrow{
+    top: 58%;
+    color: rgb(226, 226, 226) ;
+}
+
+#snap .next_arrow:hover, #snap .prev_arrow:hover{
+    color: rgb(129, 129, 129);
+}
+#snap ul {
+    width: calc(100% /5 *14);
+}
+
+#snap ul li{
+    width: calc(100% /14 - 20px );
+    position: relative;
+    max-width: 16.4rem;
+    margin: 0 10px 0 10px;
+    display: inline-block;
+}
+
+#snap ul li  a img{
+    width: 100%;
+    height: 100%;
+}
+#snap ul li  a {
+    display: block ;
+}
+#snap ul li a div {    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    background-color: #00000070;
+    color: white;
+    transition: 300ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#snap ul li:hover a div{
+    opacity: 1;
+}
+
+#snap ul li a div h4{
+    font-size: .8rem;
+    
+}
+
+#snap ul li a div span{
+    position: absolute;
+    font-size: .6rem;
+    bottom: .25rem;
+    right: .25rem;
+
 }

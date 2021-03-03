@@ -1,35 +1,36 @@
 
 const lookBookLists = document.querySelector('.look_book_lists');
-let curLookBookPosition = 0;
+let LBposition = 0;
 
-function moveLookBookSlide(num) {
-    lookBookLists.style.transition = '300ms';
+function moveLBSlide(num) {
+    lookBookLists.style.transition = '700ms';
     lookBookLists.style.transform = `translateX(calc( -10% - (11.1% * ${num})))`
 }
 
-function switchLookBookPosition(num) {
+function switchLBposition(num) {
     lookBookLists.style.transition = '0s';
     lookBookLists.style.transform = `translateX(calc(-10% - (11.1%* ${num})))`
 }
 
 function moveSlide(num) {
-    curLookBookPosition = curLookBookPosition + num;
-    if (curLookBookPosition === 6) {
-        curLookBookPosition = 0;
-        switchLookBookPosition(curLookBookPosition);
+    LBposition = LBposition + num;
+    if (LBposition === 6) {
+        LBposition = 0;
+        switchLBposition(LBposition);
         setTimeout(() => {
-            curLookBookPosition = 1;
-            moveLookBookSlide(curLookBookPosition);
+            LBposition = 1;
+            moveLBSlide(LBposition);
         }, 30);
-    } else if (curLookBookPosition === -1) {
-        curLookBookPosition = 5;
-        switchLookBookPosition(curLookBookPosition);
+    } else if (LBposition === -1) {
+        LBposition = 5;
+        switchLBposition(LBposition);
         setTimeout(() => {
-            curLookBookPosition = 4;
-            moveLookBookSlide(curLookBookPosition);
+            LBposition = 4;
+            moveLBSlide(LBposition);
         }, 30);
     } else {
-        moveLookBookSlide(curLookBookPosition);
+        moveLBSlide(LBposition);
     }
 }
+
 
