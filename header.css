@@ -9,7 +9,6 @@ body{
     font-family: 'Open Sans', sans-serif;
     align-items: center;
     max-width: 1903px;
-    
 }
 
 *{
@@ -26,13 +25,13 @@ h1{
 
 h2{
     font-weight: 900;
-    font-size: 40px;
-    padding: 63px 0 22px 0;
+    font-size: 2rem;
+    padding: 3.15rem 0 1.1rem 0;
     text-align: center;
 }
 
 h3{
-    font-size: 24px;
+    font-size: 1.2rem;
     margin: 0;
 }
 
@@ -64,7 +63,6 @@ button{
 }
 
 section{
-    min-width: 61.25rem;
      /* margin: 4rem auto; */
      position: relative;
     margin: 0 0 80px 0;
@@ -82,13 +80,8 @@ header{
     z-index: 1;
 }
 
-header:hover {
-    background-color: white;
-}
-
 .header_container {
     max-width: 85.6rem;
-    min-width: 70.5rem;
     height: 4.5rem;
     margin: 0 auto;
     display: flex;
@@ -96,7 +89,22 @@ header:hover {
     align-items: center;
 }
 
-
+/*----------------------- 모바일 토글 --------------------*/
+.header_toggle_btn{
+    color:#fff;
+    display: none;
+    position:absolute;
+    left: 1rem;
+    top: 1.6rem;
+}
+/*--------------------- 모바일 네비 접기 버튼 -----------------*/
+.cancel_btn{
+    display: none;
+    position: absolute;
+    right: .7rem;
+    top: .7rem;
+    font-size: 2rem;
+}
 
 /*------------------------ 로고---------------------- */
 
@@ -112,20 +120,13 @@ header:hover {
     cursor: pointer;
 }
 
-header:hover .logo_red {
-    opacity: 1;
-}
-header:hover .logo_white {
-    opacity: 0;
-}
+
 
 .logo a img{
     width: 6.5rem;
     height: 2rem;
 }
 .logo a{
-    height: 100%;
-    line-height: 100%;
     padding: 1.25rem 0 0 0;
     margin: 0 1.75rem 0 0; 
 }
@@ -137,11 +138,12 @@ header:hover .logo_white {
 .left_header{
     display: flex;
     align-items: center;
-}
 
+}
 
 .left_header nav{
     height: 100%;
+    transition: 500ms;
 }
 
 .left_header nav ul{
@@ -149,7 +151,7 @@ header:hover .logo_white {
 }
 
 .top_menu{
-    color:#fff;
+    color:black;
     display: inline-block;
     height: 100%;
     padding: 1.8rem 1.25rem 1.8rem 1.25rem;
@@ -163,9 +165,6 @@ header:hover .logo_white {
 }
 
 
-header:hover .top_menu h1{
-    color: black;
-}
 
 .top_menu h1::after{
     content: '';
@@ -180,9 +179,7 @@ header:hover .top_menu h1{
     transition: transform 300ms ease;
 }
 
-.top_menu:hover h1::after {
-    transform: scale(1 , 1);
-}
+
 
 /* 네비 다운메뉴 부분 */
 .menu_content{
@@ -306,12 +303,6 @@ header:hover .top_menu h1{
     opacity: 0;
 }
 
-.container_list ul li a:hover::after,
-.community_container_list ul li a:hover::after,
-.community_event_list ul li a:hover::after{
-    transform: translate(10px , -6px);
-    opacity: 1;
-}
 
 
 
@@ -378,9 +369,6 @@ header:hover .top_menu h1{
     transition: 300ms;
 }
 
-.container_image a:hover .image_description {
-    opacity: 1;
-}
 
 /* ------------------- 헤더 좌측 끝 ------------------- */
 /* -------------------헤더 오른쪽 시작----------------------------- */
@@ -427,15 +415,7 @@ header:hover .top_menu h1{
     top: 0px; 
     opacity: 0;
 }
-header:hover .black_icon{
-    opacity: 1;
-}
 
-
-.right_header ul li:hover  .hidden_button ul{
-    opacity: 1;
-    visibility: visible;
-}
 
 .right_header ul li img{
     height: 1.4rem;
@@ -466,8 +446,6 @@ header.scrolled .top_menu h1{
 #banner_wrapper{
     max-height: 44rem;
     max-width: 95.15rem;
-    min-width: 63rem;
-    min-height: 27.7rem;
     width: 100%;
     height: 46.24vw ;
     /* 높이가 안에 것들을 측정해 자동으로 왜 하지 못할까? */
@@ -550,7 +528,6 @@ header.scrolled .top_menu h1{
 /*********************       new 섹션 시작           ***********************/
 
 #new{
-     min-width: 61.25rem;
      margin: 4rem auto;
      position: relative;
 }
@@ -774,7 +751,6 @@ background-color: #ffffff80;
 
 .mid_banner a img {
     width: 100%;
-    min-width: 42rem;
 }
 
 /**********************   위클리 베스트 시작 ********************************/
@@ -1051,3 +1027,281 @@ background-color: #ffffff80;
     right: .25rem;
 
 }
+
+
+/******************    footer     ******************/
+
+footer{
+    background-color: #f7f7f7;
+}
+
+footer .slide_display{
+    padding: 50px 0 0 0;
+    display: flex;
+}
+
+footer h3{
+    padding: 6px 0;
+}
+
+.footer_left{
+    width: 50%;
+}
+
+footer .slide_display .footer_left .footer_left_top p{
+    margin: 6px 0;
+    font-size: 12px;
+}
+footer .slide_display .footer_left .footer_left_top p:last-child{
+ color:#969896;
+}
+.footer_left_down{
+    margin: 48px 0;
+}
+
+
+.footer_left_down p{
+    font-size: 12px;
+    display: inline-block;
+
+}
+.footer_left_down p::after{
+    content: "";
+    margin: 8px;
+    background: #000;
+    
+
+}
+
+.footer_sns{
+    display: flex;
+
+}
+.footer_sns li{
+    margin: 0 18px 30px 0 ;
+}
+
+.footer_right{
+    width: 50%;
+    text-align: right;
+    position: relative;
+}
+.footer_right ul{
+    display: inline-block;
+    margin: 0 0 0 50px;
+}
+.footer_right ul li {
+    font-size: 12px;
+    margin: 9px 0 9px 0;
+}
+
+
+.family{
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column-reverse;
+    align-items: flex-end;
+    width: 136px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 12px;
+}
+
+.family ul {
+    transition: 300ms;
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+.family ul li{
+    padding: 4px 0;
+}
+
+.family p {
+    width: 100%;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    text-align: center;
+    padding: 4px 0;
+    transition: 300ms;
+}
+
+.family p:hover{
+    border: hidden;
+    border-top-width: 50%;
+    border-top: 1px solid #808080;;
+    border-radius: 0px;
+}
+
+.family p:hover{
+    background-color: #f7f7f7;
+    border: 1px solid #808080;
+}
+
+.family p:hover + ul{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.site_end .slide_display{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.end_left{
+    font-size: 12px;
+}
+
+.end_right li {    
+font-size: 12px;
+line-height: 100%;
+  display: inline-block;
+  margin: 0 0 50px 30px;
+
+}
+.end_right li img{
+    margin: auto;
+
+}
+.end_right li span{
+    line-height: 100%;
+    margin: auto;
+
+}
+
+
+@media (hover: hover) {
+  header:hover {
+    background-color: white;
+}
+header:hover .logo_red {
+    opacity: 1;
+}
+header:hover .logo_white {
+    opacity: 0;
+}
+
+header:hover .top_menu h1{
+    color: black;
+}
+.top_menu:hover h1::after {
+    transform: scale(1 , 1);
+}
+.container_list ul li a:hover::after,
+.community_container_list ul li a:hover::after,
+.community_event_list ul li a:hover::after{
+    transform: translate(10px , -6px);
+    opacity: 1;
+}
+
+
+.container_image a:hover .image_description {
+    opacity: 1;
+}
+header:hover .black_icon{
+    opacity: 1;
+}
+
+
+.right_header ul li:hover  .hidden_button ul{
+    opacity: 1;
+    visibility: visible;
+}
+}
+
+
+/***********************   미디어 쿼리       *************************************************/
+
+
+
+
+@media screen and (max-width: 768px){
+html{
+    font-size: 8px;
+}
+
+.header_toggle_btn{
+    display: block;
+
+}
+header{
+    position: absolute;
+}
+.left_header nav{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: auto;
+    background-color: #ffffff;
+    opacity: 0;
+    visibility: hidden;   
+    z-index: 1;
+}
+
+.left_header nav.open{
+    opacity: 1;
+    visibility: visible;
+}
+.left_header nav.open .cancel_btn{
+    display: block;
+    
+}
+
+nav ul .top_menu{
+    display: block;
+}
+
+.logo{
+    position: absolute;
+    justify-content: center;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo a{
+    margin: 0;
+}
+
+.logo a img{
+    width: 3.25rem;
+    height: 1rem;
+}
+
+/*오른쪽 헤더 아이콘*/
+.right_header ul li img{
+    height: 1rem;
+    width: 1rem;
+}
+
+.menu_content{
+    position: static;
+    display:none;
+}
+
+.right_header ul li:nth-child(1), .right_header ul li:nth-child(3){
+    display: none;
+}
+
+/*** 드롭다운 이미지 안보이게 ****/
+.container_image{
+    display: none;
+}
+.next_arrow, .prev_arrow{
+    display: none;
+}
+.mid_banner{
+    flex-direction: column;
+}
+
+
+}
+
